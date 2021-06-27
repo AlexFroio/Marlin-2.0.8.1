@@ -2,7 +2,9 @@
 
 Hi! Welcome to my config for using an `SKR 1.3` with Marlin on an Anycubic i3 Mega. This works for both i3 Mega and i3 Mega-S.
 
-Note: This should serve as a jumping off point for others who are trying to get started with Marlin. As such I will list some things to watch out for in this repository:
+Note: This should serve as a jumping off point for others who are trying to get started with Marlin. As such I will list some things to watch out for in this repository.
+
+***IMPORTANT NOTE:*** You should get a *different* LCD screen if you are going to a custom board. Any version of Marlin that needs to work with the **Stock LCD** requires a rare version of the LCD's firmware. I do not know where to get it.
 
 ## Printer Specs
 
@@ -14,10 +16,21 @@ Note: This should serve as a jumping off point for others who are trying to get 
   - All 5 steppers are Nema 17s
 - E3D v5 hotend clone (a v6 will fit, but will be shorter.)
 - Anycubic Glass Ultrabase
+- BIGTREETECH TFT24 V1.1 - Replaces the old LCD screen. Fits with the following [bracket](https://www.thingiverse.com/thing:4843427).
+
+## Code changes
+
+***WIP, this takes some time***
+
+### `Configuration.h`
+- Line 112 - uncommented `SERIAL_PORT_2` and set it to `-1`
+- Line 137 - Changed `MOTHERBOARD` to `BOARD_BTT_SKR_V1_3`
+- Line 141 - Defined custom machine name
+-
 
 ## Daughterboard pinout
 
-There is an interfacing board between the printer's peripherals (Save for Y-axis controls) and its mainboard. ![This Website](https://www.auditeon.com/projects:3dprinting:anycubic_i3_mega:redesign_hub_pcb) has a great breakdown of the pins. I still recommend taking a multimeter, on the continuity setting and verifying all of these.
+There is an interfacing board between the printer's peripherals (Save for Y-axis controls) and its mainboard. [This Website](https://www.auditeon.com/projects:3dprinting:anycubic_i3_mega:redesign_hub_pcb) has a great breakdown of the pins. I still recommend taking a multimeter, on the continuity setting and verifying all of these.
 
 For my printer, I ended up replacing this board entirely with a custom soldered solution so that I could add back individual GND pins (this changes nothing in the config files)
 

@@ -1,3 +1,26 @@
+# DukeCarge's Marlin 2.0.8.1 configuration
+
+Hi! Welcome to my config for using an `SKR 1.3` with Marlin on an Anycubic i3 Mega. This works for both i3 Mega and i3 Mega-S.
+
+Note: This should serve as a jumping off point for others who are trying to get started with Marlin. As such I will list some things to watch out for in this repository:
+
+## Printer Specs
+
+- Needs 5 stepper drivers for compatibility
+  - Single X-axis stepper
+  - Single Y-axis stepper
+  - Dual Z-axis stepper (You could get away with 4 and splice the cables together. However, it means you MUST change everything in this repository in regards to the Z-axis.)
+  - BMG Clone Bowden Extruder
+  - All 5 steppers are Nema 17s
+- E3D v5 hotend clone (a v6 will fit, but will be shorter.)
+- Anycubic Glass Ultrabase
+
+## Daughterboard pinout
+
+There is an interfacing board between the printer's peripherals (Save for Y-axis controls) and its mainboard. ![This Website](https://www.auditeon.com/projects:3dprinting:anycubic_i3_mega:redesign_hub_pcb) has a great breakdown of the pins. I still recommend taking a multimeter, on the continuity setting and verifying all of these.
+
+For my printer, I ended up replacing this board entirely with a custom soldered solution so that I could add back individual GND pins (this changes nothing in the config files)
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
@@ -42,42 +65,6 @@ To build Marlin 2.0 you'll need [Arduino IDE 1.8.8 or newer](https://www.arduino
   [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)|ARM® Cortex-M7|
   [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)|ARM® Cortex-M7|
   Linux Native|x86/ARM/etc.|Raspberry Pi
-
-## Submitting Changes
-
-- Submit **Bug Fixes** as Pull Requests to the ([bugfix-2.0.x](https://github.com/MarlinFirmware/Marlin/tree/bugfix-2.0.x)) branch.
-- Follow the [Coding Standards](http://marlinfw.org/docs/development/coding_standards.html) to gain points with the maintainers.
-- Please submit your questions and concerns to the [Issue Queue](https://github.com/MarlinFirmware/Marlin/issues).
-
-## Marlin Support
-
-The Issue Queue is reserved for Bug Reports and Feature Requests. To get help with configuration and troubleshooting, please use the following resources:
-
-- [Marlin Documentation](http://marlinfw.org) - Official Marlin documentation
-- [Marlin Discord](https://discord.gg/n5NJ59y) - Discuss issues with Marlin users and developers
-- Facebook Group ["Marlin Firmware"](https://www.facebook.com/groups/1049718498464482/)
-- RepRap.org [Marlin Forum](http://forums.reprap.org/list.php?415)
-- [Tom's 3D Forums](https://forum.toms3d.org/)
-- Facebook Group ["Marlin Firmware for 3D Printers"](https://www.facebook.com/groups/3Dtechtalk/)
-- [Marlin Configuration](https://www.youtube.com/results?search_query=marlin+configuration) on YouTube
-
-## Contributors
-
-Marlin is constantly improving thanks to a huge number of contributors from all over the world bringing their specialties and talents. Huge thanks are due to [all the contributors](https://github.com/MarlinFirmware/Marlin/graphs/contributors) who regularly patch up bugs, help direct traffic, and basically keep Marlin from falling apart. Marlin's continued existence would not be possible without them.
-
-## Administration
-
-Regular users can open and close their own issues, but only the administrators can do project-related things like add labels, merge changes, set milestones, and kick trolls. The current Marlin admin team consists of:
-
- - Scott Lahteine [[@thinkyhead](https://github.com/thinkyhead)] - USA - Project Maintainer &nbsp; [![Donate](https://api.flattr.com/button/flattr-badge-large.png)](http://www.thinkyhead.com/donate-to-marlin)
- - Roxanne Neufeld [[@Roxy-3D](https://github.com/Roxy-3D)] - USA
- - Keith Bennett [[@thisiskeithb](https://github.com/thisiskeithb)] - USA
- - Victor Oliveira [[@rhapsodyv](https://github.com/rhapsodyv)] - Brazil
- - Chris Pepper [[@p3p](https://github.com/p3p)] - UK
- - Jason Smith [[@sjasonsmith](https://github.com/sjasonsmith)] - USA
- - Luu Lac [[@sjasonsmith](https://github.com/sjasonsmith)] - USA
- - Bob Kuhn [[@Bob-the-Kuhn](https://github.com/Bob-the-Kuhn)] - USA
- - Erik van der Zalm [[@ErikZalm](https://github.com/ErikZalm)] - Netherlands &nbsp; [![Flattr Erik](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ErikZalm&url=https://github.com/MarlinFirmware/Marlin&title=Marlin&language=&tags=github&category=software)
 
 ## License
 

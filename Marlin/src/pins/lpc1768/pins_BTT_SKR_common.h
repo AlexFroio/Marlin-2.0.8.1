@@ -77,11 +77,11 @@
 // Heaters / Fans
 //
 #ifndef HEATER_0_PIN
-  #define HEATER_0_PIN                     P2_07
+  #define HEATER_0_PIN                     P2_04 // We use 2_04 as a test that our MOSFET isn't bad. originally P2_07
 #endif
 #if HOTENDS == 1
   #ifndef FAN1_PIN
-    #define FAN1_PIN                       P2_04
+    #define FAN1_PIN                       P2_07// We use 2_07 as a test that our MOSFET isn't bad. originally P2_04
   #endif
 #else
   #ifndef HEATER_1_PIN

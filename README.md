@@ -1,6 +1,6 @@
 # DukeCarge's Marlin 2.0.8.1 configuration
 
-Hi! Welcome to my config for using an `SKR 1.3` with Marlin on an Anycubic i3 Mega. This works for both i3 Mega and i3 Mega-S.
+Hi! Welcome to my config for using an `SKR 1.3` with Marlin on an Anycubic i3 Mega. This works for both i3 Mega and i3 Mega-S. If you have any other SKR boards, you'll need to make some changes.
 
 Note: This should serve as a jumping off point for others who are trying to get started with Marlin. As such I will list some things to watch out for in this repository.
 
@@ -28,11 +28,19 @@ Note: This should serve as a jumping off point for others who are trying to get 
 - Line 141 - Defined custom machine name
 -
 
+### `pins_BTT_SKR_common.h`
+- Line 80 - Changed `HEATER_0_PIN` to `P2_04` for troubleshooting. Swap with define on line 84 if not using HE1 for heating.
+- Line 84 - Changed `FAN1_PIN` to `P2_07` for troubleshooting. Swap with define on line 80 if not using HE1 for heating.
+
 ## Daughterboard pinout
 
 There is an interfacing board between the printer's peripherals (Save for Y-axis controls) and its mainboard. [This Website](https://www.auditeon.com/projects:3dprinting:anycubic_i3_mega:redesign_hub_pcb) has a great breakdown of the pins. I still recommend taking a multimeter, on the continuity setting and verifying all of these.
 
 For my printer, I ended up replacing this board entirely with a custom soldered solution so that I could add back individual GND pins (this changes nothing in the config files)
+
+## Additional links
+
+- [Kris_3D's SKR 1.4 conversion guide](https://www.thingiverse.com/thing:4613998)
 
 # Marlin 3D Printer Firmware
 

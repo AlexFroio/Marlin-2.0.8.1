@@ -18,6 +18,19 @@ Note: This should serve as a jumping off point for others who are trying to get 
 - Anycubic Glass Ultrabase
 - BIGTREETECH TFT24 V1.1 - Replaces the old LCD screen. Fits with the following [bracket](https://www.thingiverse.com/thing:4843427).
 
+## Physical changes
+
+- BIGTREETECH TFT24 V1.1 - Replaces the old LCD screen. Fits with the following [bracket](https://www.thingiverse.com/thing:4843427).
+- SKR1.3 wiring changeover, with [stepper driver fanduct](https://www.thingiverse.com/thing:4908871) (Only works if you move the PSU out from under the printer) and a set of someone else's [brackets for mounting the skr1.3](https://www.thingiverse.com/thing:3629440)
+
+![Wiring diagram](img/i3megaskr1-3conversion.png)
+
+- [AI3M MK4 carriage assembly](https://www.thingiverse.com/thing:3537449) - Higher compatibility for modding, better mounting of parts cooling fans and just overall lighter than the stock metal x-carriage.
+- [Z-axis T Nut replacements](https://www.amazon.com/gp/product/B07WNRTQ4L) - If you need them, the stock ones are **tapped** so that you can secure them with M3 screws. So if you change to these, you'll need to mount them upside down, with longer screws and some M3 nuts to tighten them down.
+- [Sunon heatsink 4010 fan](https://www.amazon.com/dp/B00CABZMX2) - runs quieter and better than stock.
+- [Sunon 5015 parts cooling fan](https://www.digikey.com/en/products/detail/sunon-fans/MF50151V2-B00U-A99/7942633) - runs quieter and better than stock
+- [BMOUO 360W PSU](https://www.amazon.com/gp/product/B01EWG6YT8) - runs quieter and adds capacity for running LED strips.
+
 ## Code changes
 
 ***WIP, this takes some time***

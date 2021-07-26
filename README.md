@@ -54,6 +54,7 @@ For my printer, I ended up replacing this board entirely with a custom soldered 
 ## Additional links
 
 - [Kris_3D's SKR 1.4 conversion guide](https://www.thingiverse.com/thing:4613998)
+- [Anycubic's connectors (2.0mm pitch)](https://www.jst-mfg.com/product/detail_e.php?series=199)
 
 # Marlin 3D Printer Firmware
 
